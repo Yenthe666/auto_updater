@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data noupdate="1">
+    <record id="ir_cron_odoo_updater" model="ir.cron">
+      <field name="name">Automatic Odoo updater</field>
+      <field name="interval_number">1</field>
+      <field name="interval_type">weeks</field>
+      <field name="numbercall">-1</field>
+      <field name="doall" eval="False"/>
+      <field name="model">odoo.updater</field>
+      <field name="function">update_odoo_codebase</field>
+      <field name="args">()</field>
+      <field name="active" eval="True"/>
+    </record>
+  </data>
+</odoo>
